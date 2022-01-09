@@ -1,0 +1,18 @@
+import board
+import digitalio
+import time
+"""from https://learn.adafruit.com/welcome-to-circuitpython/exploring-your-first-circuitpython-program"""
+
+led = digitalio.DigitalInOut(board.LED)
+led.direction = digitalio.Direction.OUTPUT
+short_blink = 0.1
+long_blink = .5
+
+print("Hello, world!")
+
+
+while True:
+    led.value = True
+    time.sleep(short_blink)
+    led.value = False
+    time.sleep(long_blink)
